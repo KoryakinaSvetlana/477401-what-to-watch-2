@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Светлана Корякина](https://up.htmlacademy.ru/react/2/user/477401).
-* Наставник: `Неизвестно`.
+* Наставник: [ЮрийnШибанов](https://up.htmlacademy.ru/react/2/user/1143423).
 
 ---
 

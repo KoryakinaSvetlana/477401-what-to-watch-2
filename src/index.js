@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app.jsx";
 
+const films = [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`, `Die Hard`];
+
 ReactDOM.render(
-    <App />,
+    <App films={films}/>,
     document.getElementById(`root`)
 );

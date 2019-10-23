@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Card from '../Card/card.js';
+import Card from '../card/card.js';
 
 const Main = ({films}) => (
   <div className="catalog__movies-list">
     {films.map((film, i) => (
-      <Card key={i} film={film}/>
+      <Card key={`${i}_${film}`} film={film}/>
     ))}
   </div>
 );

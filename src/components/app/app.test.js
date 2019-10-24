@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Main from "../main/main.js";
+import App from "./app.js";
 
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
-      <Main
+      <App
         films={[`1`, `2`, `3`]}
         onHeaderClick={() => {}}
       />

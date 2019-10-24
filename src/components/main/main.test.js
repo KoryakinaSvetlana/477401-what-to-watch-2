@@ -1,14 +1,14 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Card from "../card/card.js";
+import Main from "./main.js";
 
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
-      <div className="catalog__movies-list">
-        {[`1`, `2`, `3`].map((film, i) => (
-          <Card key={`${i}_${film}`} film={film} onHeaderClick={() => {}}/>
-        ))}
-      </div>
+      <Main
+        films={[`1`, `2`, `3`]}
+        onHeaderClick={() => {}}
+      />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
+

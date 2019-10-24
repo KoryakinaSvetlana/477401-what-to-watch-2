@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Card from "../card/card.js";
+import Card from "./card.js";
 
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(

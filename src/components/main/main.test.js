@@ -6,7 +6,7 @@ it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
       <div className="catalog__movies-list">
         {[`1`, `2`, `3`].map((film, i) => (
-          <Card key={`${i}_${film}`} film={film}/>
+          <Card key={`${i}_${film}`} film={film} onHeaderClick={() => {}}/>
         ))}
       </div>
   ).toJSON();

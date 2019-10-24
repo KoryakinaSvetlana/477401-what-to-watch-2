@@ -7,7 +7,7 @@ const films = [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`, `Die Hard`];
 ReactDOM.render(
     <App
       films={films}
-      onHeaderClick={(() => {})}
+      onHeaderClick={() => {}}
     />,
     document.getElementById(`root`)
 );

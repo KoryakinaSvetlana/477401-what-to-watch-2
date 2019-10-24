@@ -4,7 +4,10 @@ import Card from "../card/card.js";
 
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
-      <Card film={`1`} />
+      <Card
+        film={`1`}
+        onHeaderClick={() => {}}
+      />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

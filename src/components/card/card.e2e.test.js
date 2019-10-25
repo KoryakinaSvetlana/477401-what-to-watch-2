@@ -14,6 +14,6 @@ it(`Check click on card header`, () => {
 
   const header = card.find(`h3`);
   header.simulate(`click`); // click on h3
- 
+
   expect(clickHandler).toHaveBeenCalledTimes(1);
 });

@@ -1,17 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Main from "../main/main.js";
+import FilmList from "../film-list/film-list.js";
 
-const App = ({films, onHeaderClick}) => (
-  <Main
+import films from "../../mock/films.js";
+
+const App = () => (
+  <FilmList
     films={films}
-    onHeaderClick={onHeaderClick}
   />
 );
-
-App.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onHeaderClick: PropTypes.func.isRequired,
-};
 
 export default App;

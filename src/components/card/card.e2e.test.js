@@ -8,12 +8,27 @@ Enzyme.configure({adapter: new Adapter()});
 it(`Check click on card header`, () => {
   const clickHandler = jest.fn();
   const card = shallow(<Card
-    film={`1`}
+    film={{id: 1, name: `1`}}
     onHeaderClick={clickHandler}
+    onHover={() => {}}
   />);
 
   const header = card.find(`h3`);
   header.simulate(`click`); // click on h3
 
   expect(clickHandler).toHaveBeenCalledTimes(1);
+});
+
+it(`Check card mouseover`, () => {
+  const mouseoverHandler = jest.fn();
+  const card = shallow(<Card
+    film={{id: 1, name: `1`}}
+    onHeaderClick={() => {}}
+    onHover={mouseoverHandler}
+  />);
+
+  const article = card.find(`article`);
+  article.simulate(`mouseover`); // mouseover on article
+
+  expect(mouseoverHandler).toHaveBeenCalledTimes(1);
 });

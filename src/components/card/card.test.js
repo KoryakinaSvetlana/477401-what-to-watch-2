@@ -5,8 +5,9 @@ import Card from "./card.js";
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
       <Card
-        film={`1`}
+        film={{id: 1, name: `1`}}
         onHeaderClick={() => {}}
+        onHover={() => {}}
       />
   ).toJSON();
   expect(tree).toMatchSnapshot();

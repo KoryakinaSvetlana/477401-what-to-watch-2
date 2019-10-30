@@ -29,6 +29,19 @@ it(`Check card mouseover`, () => {
 
   const article = card.find(`article`);
   article.simulate(`mouseover`); // mouseover on article
-
   expect(mouseoverHandler).toHaveBeenCalledTimes(1);
+});
+
+it(`Check card mouseover with card`, () => {
+  const mouseoverHandler = jest.fn();
+  const card = shallow(<Card
+    film={{id: 1, name: `1`}}
+    onHeaderClick={() => {}}
+    onHover={mouseoverHandler}
+  />);
+
+  const article = card.find(`article`);
+
+  article.simulate(`mouseover`, {target: {value: {id: 1, name: `1`}}}); // mouseover on article
+  expect(mouseoverHandler).toBeCalledWith({id: 1, name: `1`});
 });

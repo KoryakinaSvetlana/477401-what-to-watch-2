@@ -1,20 +1,20 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Card from '../card/card.js';
 
-class FilmList extends Component {
+class FilmList extends PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
       activeFilm: null,
     };
+  }
 
-    this.handleHeaderClick = () => {};
+  handleHeaderClick() {}
 
-    this.handleHoverCard = (film) => {
-      this.setState({activeFilm: film});
-    };
+  handleCardHover(film) {
+    this.setState({activeFilm: film});
   }
 
   render() {
@@ -24,10 +24,10 @@ class FilmList extends Component {
       <div className="catalog__movies-list">
         {films.map((film) => (
           <Card
-            key={`${film.id}`}
+            key={film.id}
             film={film}
             onHeaderClick={this.handleHeaderClick}
-            onHover={this.handleHoverCard}
+            onHover={this.handleCardHover}
           />
         ))}
       </div>

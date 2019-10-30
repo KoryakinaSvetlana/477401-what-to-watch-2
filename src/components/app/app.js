@@ -1,12 +1,18 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import FilmList from "../film-list/film-list.js";
 
-import films from "../../mock/films.js";
-
-const App = () => (
+const App = ({films}) => (
   <FilmList
     films={films}
   />
 );
+
+App.propTypes = {
+  films: PropTypes.arrayOf(PropTypes.shape({
+    previewImage: PropTypes.string,
+    name: PropTypes.string,
+  })).isRequired,
+};
 
 export default App;

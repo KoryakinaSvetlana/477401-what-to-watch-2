@@ -5,7 +5,7 @@ const Card = ({film, onHeaderClick, onHover}) => (
   <article
     className="small-movie-card catalog__movies-card"
     onMouseOver={() => {
-      onHover(film);
+      onHover({target: {value: film}});
     }}>
     <div className="small-movie-card__image">
       <img src={film.previewImage} alt={film.name} width="280" height="175" />

@@ -15,12 +15,13 @@ class FilmList extends PureComponent {
 
   handleHeaderClick() {}
 
-  handleCardHover(film) {
+  handleCardHover({target: {value: film}}) {
     this.setState({activeFilm: film});
   }
 
   render() {
     const {films} = this.props;
+    const {activeFilm} = this.state;
 
     return (
       <div className="catalog__movies-list">
@@ -32,6 +33,7 @@ class FilmList extends PureComponent {
             onHover={this.handleCardHover}
           />
         ))}
+        <div>{activeFilm && activeFilm.name}</div>
       </div>
     );
   }

@@ -38,9 +38,7 @@ it(`Check card mouseover with card`, () => {
   const card = shallow(<Card
     film={film}
     onHeaderClick={() => {}}
-    onHover={() => {
-      mouseoverHandler({target: {value: film}});
-    }}
+    onHover={mouseoverHandler}
   />);
 
   const article = card.find(`article`);

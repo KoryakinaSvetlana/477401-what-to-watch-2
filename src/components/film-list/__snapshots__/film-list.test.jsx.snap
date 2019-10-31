@@ -6,6 +6,7 @@ exports[`App correctly renders after relaunch 1`] = `
 >
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -13,7 +14,6 @@ exports[`App correctly renders after relaunch 1`] = `
       <img
         alt="1"
         height="175"
-        src="https://via.placeholder.com/280x175"
         width="280"
       />
     </div>
@@ -31,6 +31,7 @@ exports[`App correctly renders after relaunch 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -38,7 +39,6 @@ exports[`App correctly renders after relaunch 1`] = `
       <img
         alt="2"
         height="175"
-        src="https://via.placeholder.com/280x175"
         width="280"
       />
     </div>
@@ -56,6 +56,7 @@ exports[`App correctly renders after relaunch 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -63,7 +64,6 @@ exports[`App correctly renders after relaunch 1`] = `
       <img
         alt="3"
         height="175"
-        src="https://via.placeholder.com/280x175"
         width="280"
       />
     </div>
@@ -79,5 +79,6 @@ exports[`App correctly renders after relaunch 1`] = `
       </a>
     </h3>
   </article>
+  <div />
 </div>
 `;

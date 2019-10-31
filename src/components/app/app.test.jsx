@@ -1,13 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.js";
+import App from "./app.jsx";
 
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
       <App
-        films={[`1`, `2`, `3`]}
-        onHeaderClick={() => {}}
+        films={[{id: 1, name: `1`}, {id: 2, name: `2`}, {id: 3, name: `3`}]}
       />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
+

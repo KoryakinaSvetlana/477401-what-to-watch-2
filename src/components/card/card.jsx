@@ -8,7 +8,7 @@ const Card = ({film, onHeaderClick, onHover}) => (
       onHover(film);
     }}>
     <div className="small-movie-card__image">
-      <img src="https://via.placeholder.com/280x175" alt={film.previewImage} width="280" height="175" />
+      <img src={film.previewImage} alt={film.name} width="280" height="175" />
     </div>
     <h3 className="small-movie-card__title" onClick={onHeaderClick}>
       <a className="small-movie-card__link" href="movie-page.html">{film.name}</a>
@@ -18,6 +18,7 @@ const Card = ({film, onHeaderClick, onHover}) => (
 
 Card.propTypes = {
   film: PropTypes.shape({
+    id: PropTypes.number,
     previewImage: PropTypes.string,
     name: PropTypes.string,
   }).isRequired,

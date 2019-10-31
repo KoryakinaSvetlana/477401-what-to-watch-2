@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import FilmList from "../film-list/film-list.js";
+import FilmList from "../film-list/film-list.jsx";
 
 const App = ({films}) => (
   <FilmList
@@ -10,6 +10,7 @@ const App = ({films}) => (
 
 App.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
     previewImage: PropTypes.string,
     name: PropTypes.string,
   })).isRequired,

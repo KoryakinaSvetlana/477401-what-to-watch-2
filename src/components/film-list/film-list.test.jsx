@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./app.js";
+import FilmList from "./film-list.jsx";
 
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer.create(
-      <App
+      <FilmList
         films={[{id: 1, name: `1`}, {id: 2, name: `2`}, {id: 3, name: `3`}]}
       />
   ).toJSON();

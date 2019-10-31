@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Card from './card';
+import Card from './card.jsx';
 
 Enzyme.configure({adapter: new Adapter()});
 
@@ -33,15 +33,18 @@ it(`Check card mouseover`, () => {
 });
 
 it(`Check card mouseover with card`, () => {
+  const film = {id: 1, name: `1`};
   const mouseoverHandler = jest.fn();
   const card = shallow(<Card
-    film={{id: 1, name: `1`}}
+    film={film}
     onHeaderClick={() => {}}
-    onHover={mouseoverHandler}
+    onHover={() => {
+      mouseoverHandler({target: {value: film}});
+    }}
   />);
 
   const article = card.find(`article`);
 
   article.simulate(`mouseover`); // mouseover on article
-  expect(mouseoverHandler).toBeCalledWith({id: 1, name: `1`});
+  expect(mouseoverHandler).toBeCalledWith({target: {value: film}});
 });

@@ -42,6 +42,6 @@ it(`Check card mouseover with card`, () => {
 
   const article = card.find(`article`);
 
-  article.simulate(`mouseover`, {target: {value: {id: 1, name: `1`}}}); // mouseover on article
+  article.simulate(`mouseover`); // mouseover on article
   expect(mouseoverHandler).toBeCalledWith({id: 1, name: `1`});
 });

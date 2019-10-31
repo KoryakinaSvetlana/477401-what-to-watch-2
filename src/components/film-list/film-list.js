@@ -9,6 +9,8 @@ class FilmList extends PureComponent {
     this.state = {
       activeFilm: null,
     };
+
+    this.handleCardHover = this.handleCardHover.bind(this);
   }
 
   handleHeaderClick() {}

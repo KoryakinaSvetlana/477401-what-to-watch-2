@@ -13,7 +13,9 @@ class FilmList extends PureComponent {
     this.handleCardHover = this.handleCardHover.bind(this);
   }
 
-  handleHeaderClick() {}
+  handleHeaderClick(id) {
+    location.href = `/films/${id}`;
+  }
 
   handleCardHover({target: {value: film}}) {
     this.setState({activeFilm: film});
@@ -21,7 +23,6 @@ class FilmList extends PureComponent {
 
   render() {
     const {films} = this.props;
-    const {activeFilm} = this.state;
 
     return (
       <div className="catalog__movies-list">
@@ -33,7 +34,6 @@ class FilmList extends PureComponent {
             onHover={this.handleCardHover}
           />
         ))}
-        <div>{activeFilm && activeFilm.name}</div>
       </div>
     );
   }

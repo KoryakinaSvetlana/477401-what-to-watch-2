@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import FilmList from "../film-list/film-list.jsx";
-import Details from "../details/details.jsx";
-import NotFound from "../not-found/not-found.jsx";
+import FilmList from "components/film-list/film-list";
+import Details from "components/details/details";
+import NotFound from "components/not-found/not-found";
 
 const getPage = (films) => {
   return (
     <Switch>
       <Route exact path='/' render={() => <FilmList films={films} />}/>
-      <Route path='/films/:id' component={Details}/>
-      <Route path='/' component={NotFound}/>
+      <Route path='/films/:id' render={() => <Details films={films} />}/>
+      <Route path='/' render={() => <NotFound />}/>
     </Switch>
   );
 };

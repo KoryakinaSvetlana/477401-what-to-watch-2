@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import NotFound from "../not-found/not-found.jsx";
-import films from "../../mocks/films.js";
+import NotFound from "components/not-found/not-found";
 
 const Details = (props) => {
   const id = props.match &&
              props.match.params &&
              props.match.params.id;
+  const {films} = props;
   const film = films.find((item) => item.id === +id);
 
   if (!film) {
@@ -125,7 +125,16 @@ const Details = (props) => {
 };
 
 Details.propTypes = {
-  match: PropTypes.object,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }),
+  films: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    previewImage: PropTypes.string,
+    name: PropTypes.string,
+  })).isRequired,
 };
 
 export default Details;

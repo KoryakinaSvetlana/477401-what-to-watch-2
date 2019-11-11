@@ -1,14 +1,16 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Card from "./card.jsx";
+import {BrowserRouter as Router} from "react-router-dom";
+import Card from "./card";
 
-it(`App correctly renders after relaunch`, () => {
+it(`Card correctly renders`, () => {
   const tree = renderer.create(
-      <Card
-        film={{id: 1, name: `1`}}
-        onHeaderClick={() => {}}
-        onHover={() => {}}
-      />
+      <Router>
+        <Card
+          film={{id: 1, name: `1`}}
+          onHover={() => {}}
+        />
+      </Router>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

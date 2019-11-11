@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App correctly renders after relaunch 1`] = `
+exports[`Card correctly renders 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
   onMouseOver={[Function]}
@@ -16,11 +16,10 @@ exports[`App correctly renders after relaunch 1`] = `
   </div>
   <h3
     className="small-movie-card__title"
-    onClick={[Function]}
   >
     <a
-      className="small-movie-card__link"
-      href="#"
+      href="films/1"
+      onClick={[Function]}
     >
       1
     </a>

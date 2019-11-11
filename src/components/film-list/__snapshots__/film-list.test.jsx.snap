@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App correctly renders after relaunch 1`] = `
+exports[`FilmList correctly render 1`] = `
 <div
   className="catalog__movies-list"
 >
@@ -19,11 +19,10 @@ exports[`App correctly renders after relaunch 1`] = `
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
-        className="small-movie-card__link"
-        href="#"
+        href="films/1"
+        onClick={[Function]}
       >
         1
       </a>
@@ -44,11 +43,10 @@ exports[`App correctly renders after relaunch 1`] = `
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
-        className="small-movie-card__link"
-        href="#"
+        href="films/2"
+        onClick={[Function]}
       >
         2
       </a>
@@ -69,11 +67,10 @@ exports[`App correctly renders after relaunch 1`] = `
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[Function]}
     >
       <a
-        className="small-movie-card__link"
-        href="#"
+        href="films/3"
+        onClick={[Function]}
       >
         3
       </a>

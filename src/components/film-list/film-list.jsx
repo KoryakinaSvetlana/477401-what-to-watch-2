@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Card from '../card/card.jsx';
+import Card from 'components/card/card';
 
 class FilmList extends PureComponent {
   constructor(props) {
@@ -11,10 +11,6 @@ class FilmList extends PureComponent {
     };
 
     this.handleCardHover = this.handleCardHover.bind(this);
-  }
-
-  handleHeaderClick(id) {
-    location.href = `/films/${id}`;
   }
 
   handleCardHover({target: {value: film}}) {
@@ -30,7 +26,6 @@ class FilmList extends PureComponent {
           <Card
             key={film.id}
             film={film}
-            onHeaderClick={this.handleHeaderClick}
             onHover={this.handleCardHover}
           />
         ))}

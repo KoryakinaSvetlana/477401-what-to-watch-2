@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {BrowserRouter as Router} from "react-router-dom";
-import NotFound from "./not-found.jsx";
+import NotFound from "./not-found";
 
-it(`App correctly renders after relaunch`, () => {
+it(`NotFound correctly render`, () => {
   const tree = renderer.create(
       <Router><NotFound /></Router>
   ).toJSON();

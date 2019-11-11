@@ -9,7 +9,7 @@ const getPage = (films) => {
   return (
     <Switch>
       <Route exact path='/' render={() => <FilmList films={films} />}/>
-      <Route path='/films/:id' render={() => <Details films={films} />}/>
+      <Route path='/films/:id' render={(props) => <Details {...props} films={films} />}/>
       <Route path='/' render={() => <NotFound />}/>
     </Switch>
   );

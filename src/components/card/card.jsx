@@ -12,7 +12,7 @@ const Card = ({film, onHover}) => (
       <img src={film.previewImage} alt={film.name} width="280" height="175" />
     </div>
     <h3 className="small-movie-card__title" >
-      <Link to={{pathname: `films/${film.id}`}}>
+      <Link to={`films/${film.id}`}>
         {film.name}
       </Link>
     </h3>

@@ -18,7 +18,7 @@ exports[`Card correctly renders 1`] = `
     className="small-movie-card__title"
   >
     <a
-      href="films/1"
+      href="/films/1"
       onClick={[Function]}
     >
       1

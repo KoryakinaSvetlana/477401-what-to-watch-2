@@ -21,7 +21,7 @@ exports[`FilmList correctly render 1`] = `
       className="small-movie-card__title"
     >
       <a
-        href="films/1"
+        href="/films/1"
         onClick={[Function]}
       >
         1
@@ -45,7 +45,7 @@ exports[`FilmList correctly render 1`] = `
       className="small-movie-card__title"
     >
       <a
-        href="films/2"
+        href="/films/2"
         onClick={[Function]}
       >
         2
@@ -69,7 +69,7 @@ exports[`FilmList correctly render 1`] = `
       className="small-movie-card__title"
     >
       <a
-        href="films/3"
+        href="/films/3"
         onClick={[Function]}
       >
         3

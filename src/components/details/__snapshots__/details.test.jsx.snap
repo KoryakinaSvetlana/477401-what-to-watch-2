@@ -13,3 +13,5 @@ exports[`Details correctly renders after relaunch 1`] = `
   </a>
 </div>
 `;
+
+exports[`Test routing 1`] = `" /* Здесь мы задаем маршрут, с которого хотим начать */"`;

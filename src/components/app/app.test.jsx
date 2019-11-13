@@ -1,14 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import {Route} from 'react-router';
-import Enzyme, {shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
 import App from "./app.jsx";
-import Details from "components/details/details";
-// import NotFound from "components/not-found/not-found";
-
-Enzyme.configure({adapter: new Adapter()});
 
 it(`App correctly renders`, () => {
   const tree = renderer.create(
@@ -18,20 +10,3 @@ it(`App correctly renders`, () => {
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
-
-it(`invalid path should redirect to NotFound page`, () => {
-  const wrapper = shallow(<App
-    films={[{id: 1, name: `1`}, {id: 2, name: `2`}, {id: 3, name: `3`}]}
-  />);
-  const pathMapTest = wrapper.find(Route).reduce((pathMap, route) => {
-    const routeProps = route.props();
-    pathMap[routeProps.path] = routeProps.component;
-    return pathMap;
-  }, {});
-
-  // expect(pathMapTest[`/somepath`]).toBe(NotFound);
-
-  expect(pathMapTest[`/films/2`]).toBe(Details);
-});
-

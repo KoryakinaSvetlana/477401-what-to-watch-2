@@ -6,5 +6,5 @@ module.exports = {
     `node_modules`,
     `<rootDir>/src/`
   ],
-  moduleFileExtensions: [...defaults.moduleFileExtensions, `js`, `jsx`],
+  moduleFileExtensions: [...defaults.moduleFileExtensions, `js`, `jsx`]
 };

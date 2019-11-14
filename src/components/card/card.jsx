@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 
-const Card = ({film, onHeaderClick, onHover}) => (
+const Card = ({film, onHover}) => (
   <article
     className="small-movie-card catalog__movies-card"
     onMouseOver={() => {
@@ -10,8 +11,10 @@ const Card = ({film, onHeaderClick, onHover}) => (
     <div className="small-movie-card__image">
       <img src={film.previewImage} alt={film.name} width="280" height="175" />
     </div>
-    <h3 className="small-movie-card__title" onClick={onHeaderClick}>
-      <a className="small-movie-card__link" href="movie-page.html">{film.name}</a>
+    <h3 className="small-movie-card__title" >
+      <Link to={`films/${film.id}`}>
+        {film.name}
+      </Link>
     </h3>
   </article>
 );
@@ -22,7 +25,6 @@ Card.propTypes = {
     previewImage: PropTypes.string,
     name: PropTypes.string,
   }).isRequired,
-  onHeaderClick: PropTypes.func.isRequired,
   onHover: PropTypes.func.isRequired,
 };
 

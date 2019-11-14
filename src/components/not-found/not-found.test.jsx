@@ -1,16 +1,11 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import {BrowserRouter as Router} from "react-router-dom";
-import Card from "./card";
+import NotFound from "./not-found";
 
-it(`Card correctly renders`, () => {
+it(`NotFound correctly render`, () => {
   const tree = renderer.create(
-      <Router>
-        <Card
-          film={{id: 1, name: `1`}}
-          onHover={() => {}}
-        />
-      </Router>
+      <Router><NotFound /></Router>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

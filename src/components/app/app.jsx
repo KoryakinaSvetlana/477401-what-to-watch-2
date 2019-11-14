@@ -1,12 +1,23 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import FilmList from "../film-list/film-list.jsx";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import FilmList from "components/film-list/film-list";
+import Details from "components/details/details";
+import NotFound from "components/not-found/not-found";
 
-const App = ({films}) => (
-  <FilmList
-    films={films}
-  />
-);
+const getPage = (films) => {
+  return (
+    <Switch>
+      <Route exact path='/' render={() => <FilmList films={films} />}/>
+      <Route path='/films/:id' render={(props) => <Details {...props} films={films} />}/>
+      <Route path='/' render={() => <NotFound />}/>
+    </Switch>
+  );
+};
+
+const App = ({films}) => {
+  return <Router>{getPage(films)}</Router>;
+};
 
 App.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
@@ -17,3 +28,5 @@ App.propTypes = {
 };
 
 export default App;
+
+

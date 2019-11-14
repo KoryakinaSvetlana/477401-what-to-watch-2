@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound correctly render 1`] = `
+<div>
+  <span>
+    Страница не найдена. 
+  </span>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Вернуться на главную
+  </a>
+</div>
+`;
